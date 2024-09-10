@@ -82,7 +82,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 17
-          distributions: 'zulu'
+          distribution: 'zulu'
 
       - name: Make application.yml
         run: |
