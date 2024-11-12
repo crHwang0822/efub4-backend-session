@@ -3,9 +3,9 @@ package efub.session.blog.post.service;
 import efub.session.blog.account.domain.Account;
 import efub.session.blog.account.service.AccountService;
 import efub.session.blog.exception.CustomDeleteException;
-import efub.session.blog.exception.ErrorCode;
 import efub.session.blog.post.domain.Post;
 import efub.session.blog.post.dto.PostRequestDto;
+import efub.session.blog.post.dto.PostResponseDto;
 import efub.session.blog.post.repository.PostRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -65,4 +65,16 @@ public class PostService {
         }
         postRepository.delete(post);
     }
+
+//    public List<PostResponseDto> searchPost(String keyword, String writerNickname){
+//
+//        /* 검색 조건에 해당하는 게시글 리스트 (List<Post>) 조회 */
+//
+//
+//        /* List<Post> → List<PostResponseDto> 변환 */
+//        List<PostResponseDto> responseDtoList = posts.stream().map(post ->
+//            PostResponseDto.from(post, post.getAccount().getNickname())).toList();
+//
+//        return responseDtoList;
+//    }
 }
